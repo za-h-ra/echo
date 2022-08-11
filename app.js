@@ -13,10 +13,6 @@ async function getGenre() {
 
   document.querySelector("#app").innerHTML = html;
 
-  // for (let i = 0; i < data.length; i++) {
-  //   console.log(`Genre: ${data[i]}`);
-  //   document.querySelector("#app").textContent = `${data[i]}`;
-  // }
   return data;
 }
 
