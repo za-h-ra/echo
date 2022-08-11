@@ -4,10 +4,19 @@ async function getGenre() {
   );
   let data = await response.json();
 
-  for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
-    document.querySelector("#app").innerHTML = `${data[i]}`;
-  }
+  const html = data
+    .map((genre) => {
+      return `<p>Genre: ${genre}</p>`;
+    })
+    .join("");
+  console.log(html);
+
+  document.querySelector("#app").innerHTML = html;
+
+  // for (let i = 0; i < data.length; i++) {
+  //   console.log(`Genre: ${data[i]}`);
+  //   document.querySelector("#app").textContent = `${data[i]}`;
+  // }
   return data;
 }
 
